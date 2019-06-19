@@ -8,7 +8,7 @@
 import sqlite3
 import os # Allow for calls to the shell
 
-os.system('clear') # This call clears the screen. Very helpful for avoiding testing clutter.
+#os.system('clear') # Clears the screen when using a terminal. Useful for avoiding testing clutter.
 
 conn=sqlite3.connect('/var/www/lab_app/lab_app.db')
 curs=conn.cursor()

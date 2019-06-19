@@ -1,2 +1,4 @@
 # Raspberry-Pi-Full-Stack-Revisited
-Reworking Elements from the Tech Explorations Raspberry Pi Full Stack Raspbian Class
+Reworking Elements from the Tech Explorations Raspberry Pi Full Stack Raspbian Class 
+
+This respository contains various code framents that have been created, modified and substituted for their counter parts in the Tech Explorations Raspberry Pi Full Stack and Arduino Step-By-Step Getting Started courses. This work is a departure from these two courses and intended purely as an analysis of the process involved. The analysis is from both a CLI and GUI perspective. The GUI assumes the default 'pi' user and the CLI offers a perspective that more closely follows the Tech Explorations Raspbery Pi-FS conventions. Both the GUI and CLI perspectives share a common SQLite3 database. Understanding these code fragments assumes a working understanding of the two Tech Explorations courses cited.

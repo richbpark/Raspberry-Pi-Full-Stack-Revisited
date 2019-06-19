@@ -1,0 +1,22 @@
+<!-- This is a simple style sheet to create CSS elements to use in
+   the RPiFS v2 course to test adding non-conflicting style sheets. 
+   Rich Park 2018-09-27 -->
+   
+body {
+	background-color: linen;
+}
+.tangerine1 {
+	color: purple; font-family: 'Tangerine'; font-size: 50px;
+}
+
+.tangerine2 {
+        color: blue; font-family: 'Tangerine'; font-size: 40px;
+}
+
+.dancingscript {
+	color: green; font-family: 'Dancing Script'; font-size: 30px;
+}
+
+.raleway {
+	color: red; font-family: 'Raleway'; font-size: 50px;
+}

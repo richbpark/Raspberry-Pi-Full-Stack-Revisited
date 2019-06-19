@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Lab Conditions by RPi</title>
+    <meta name="description" content="Lab conditions - RPi">
+    <meta name="author" content="Peter Dalmaris">
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- Link to the Google Fonts APIs.
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+  
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="/static/css/normalize.css">
+  <link rel="stylesheet" href="/static/css/skeleton.css">
+  
+    <!-- Link to the TMP36hello.css stylesheet.
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="/static/css/TMP36hello.css" rel="stylesheet">  
+  
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+  </head>
+  <body>
+    <div class="container">
+    <div class="row">
+      <div class="eleven columns">
+        <form id="range_select" action = "/lab_env_db" method="GET">        
+          <div class="one column">
+            <input type="radio" name="range_h" value="3" id="radio_3" /><label for="radio_3">3hrs</label>
+          </div>
+          <div class="one column">
+            <input type="radio" name="range_h" value="6" id="radio_6" /><label for="radio_6">6hrs</label>
+          </div>
+          <div class="one column">
+            <input type="radio" name="range_h" value="12" id="radio_12" /><label for="radio_12">12hrs</label>
+          </div>
+          <div class="one column">
+            <input type="radio" name="range_h" value="24" id="radio_24" /><label for="radio_24">24hrs</label>
+          </div>
+        </form>          
+      </div>
+    </div>
+      <div class="row">
+        <div class="one-third column" style="margin-top: 5%">
+          <strong>Showing all records</strong>                
+          <h2 class="raleway">Temperatures</h2>                    
+            <table class="u-full-width">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>&deg;F</th>                        
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in temp %}
+                <tr>
+                  <td>{{row[0]}}</td>
+                  <td>{{'%0.2f'|format(row[1])}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>                                             
+        </div>
+    </div>           
+  </body>
+  <script src="//code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script>
+    jQuery("#range_select input[type=radio]").click(function(){
+      jQuery("#range_select").submit();
+    });
+
+  </script>
+  
+</html>

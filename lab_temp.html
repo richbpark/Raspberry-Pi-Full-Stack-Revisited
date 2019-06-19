@@ -1,0 +1,44 @@
+<html>
+  <meta charset="utf-8">
+  <title>Lab Conditions by RPi</title>
+  <meta http-equiv="refresh" content="10">
+  <meta name="description" content="Lab conditions - RPi">
+  <meta name="author" content="Peter Dalmaris">
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  
+    <!-- Link to the Google Fonts APIs.
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+  
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="/static/css/normalize.css">
+  <link rel="stylesheet" href="/static/css/skeleton.css">
+  
+    <!-- Link to the TMP36hello.css stylesheet.
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="/static/css/TMP36hello.css" rel="stylesheet">  
+  
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/static/images/favicon.png">
+</head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="two-third column" style="margin-top: 5%">
+            <h2 class="tangerine1" >Real Time Lab Conditions</h2>
+            <h1 class="raleway">Temperature: {{"{0:0.1f}".format(temp) }}°F</h1>  
+            <p class="dancingscript">This page refreshes every 10 seconds</p>
+        </div>   
+      </div>
+    </div>           
+  </body>  
+</html>

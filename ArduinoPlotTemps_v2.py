@@ -5,7 +5,7 @@ import serial
 import matplotlib.pyplot as plot
 import statistics
 
-# The USB serial port will vary by device This particular port
+# The USB serial port will vary by device, but will be '/dev/tty*'
 
 USB_Line = '/dev/ttyUSB0' # CAUTION: may change due to USB port contention
 ser = serial.Serial(USB_Line, 9600) # RBP Raspberry Pi3-B+
@@ -29,7 +29,7 @@ def getTemps(size):
     return tempsList
 
 
-def plot_it(mytemps,offset):
+def plot_it(mytemps, offset):
     tempAve = mytemps
     offset = float(offset)
     tempAve = round(statistics.mean(tempAve),2)

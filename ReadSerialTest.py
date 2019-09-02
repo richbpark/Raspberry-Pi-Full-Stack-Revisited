@@ -10,3 +10,4 @@ while True:
         lineString = str(line)
         print (lineString[0:1])
         print (type(lineString))
+        print()
